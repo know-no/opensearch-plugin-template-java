@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'opensearch.opensearchplugin'
 apply plugin: 'opensearch.yaml-rest-test'
-apply plugin: 'opensearch.pluginzip'
+//apply plugin: 'opensearch.pluginzip'
 
 def pluginName = 'rename'
 def pluginDescription = 'Custom plugin'
@@ -63,7 +63,7 @@ validateNebulaPom.enabled = false
 
 buildscript {
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "3.0.0-SNAPSHOT")
+        opensearch_version = System.getProperty("opensearch.version", "1.3.6")
     }
 
     repositories {
