@@ -24,6 +24,14 @@ tasks.register("preparePluginPathDirs") {
     }
 }
 
+allprojects {
+    group = 'org.opensearch'
+    plugins.withId('java') {
+        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+    }
+}
+
 publishing {
     publications {
         pluginZip(MavenPublication) { publication ->
